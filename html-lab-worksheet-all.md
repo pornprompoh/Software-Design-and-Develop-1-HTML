@@ -113,10 +113,25 @@
   ### บันทึกผลการทดลอง
 - รหัสเอกสาร HTML ที่เขียน:
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Web Page</title>
+</head>
+<body>
+    <h1>Welcome to kmitl (pornprom sukjaimit) web page</h1>
+    <p>This is my first web page.</p>
+    <div>This is a block element</div>
+    <span>This is an inline element</span>
+    <em>This text is emphasized</em>
+    <strong>This text is strong</strong>    
+</body>
+</html>]
 ```
 - ภาพผลลัพธ์:
-[วางภาพ screenshot ที่นี่]
+[วางภาพ screenshot ที่นี่
+![image](https://github.com/user-attachments/assets/b64a433b-81d9-4744-836a-1cc1ddcc0c4d)
+]
   
 ## การทดลองที่ 3: การจัดการข้อความและการจัดรูปแบบ
 ### ขั้นตอนการทดลอง
@@ -149,10 +164,56 @@
 ### บันทึกผลการทดลอง
 - รหัสเอกสาร HTML ที่เขียน:
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำตัวเอง</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        hr {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>แนะนำตัวเอง</h1>
+    <hr>
+    
+    <h2>ชื่อ-นามสกุล</h2>
+    <p>ชื่อ: นายพรพรม สุขใจมิตร</p>
+    <hr>
+    
+    <h2>ประวัติการศึกษา</h2>
+    <p>ระดับปริญญาตรี: สถาบันเทคโนโลยีพระจอมเกบ้าเจ้าคุณทหารลาดกระบัง</p>
+    <p>ระดับมัธยม: โรงเรียนเตรียมอุดมศึกษาน้อมเกล้าสมุทรปราการ</p>
+    <hr>
+    
+    <h2>งานอดิเรก</h2>
+    <p>- การเขียนโปรแกรม และพัฒนาเว็บแอปพลิเคชัน</p>
+    <p>- การเล่นเกมและศึกษาฮาร์ดแวร์คอมพิวเตอร์</p>
+    <p>- การอ่านหนังสือเกี่ยวกับเทคโนโลยีและนวัตกรรม</p>
+    <hr>
+    
+    <h2>เป้าหมายในอนาคต</h2>
+    <p>มุ่งมั่นพัฒนาแอปพลิเคชันที่สามารถช่วยให้การเรียนรู้และการทำงานสะดวกยิ่งขึ้น รวมถึงต้องการสร้างสรรค์เทคโนโลยีที่สามารถส่งเสริมการพัฒนาชุมชนอย่างยั่งยืน</p>
+</body>
+</html>
+]
 ```
 - ภาพผลลัพธ์:
-[วางภาพ screenshot ที่นี่]
+[วางภาพ screenshot ที่นี่
+![image](https://github.com/user-attachments/assets/8bb5c2f0-a8fb-4c31-b05e-8faee6723750)
+]
 
 ## การทดลองที่ 4: การสร้างลิงก์และการแทรกรูปภาพ
 
@@ -319,10 +380,93 @@
 ### บันทึกผลการทดลอง
 - รหัสเอกสาร HTML ที่เขียน:
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แกลเลอรีสินค้า</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        hr {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .gallery-item {
+            text-align: center;
+        }
+        .back-to-top {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function enlargeImage(src) {
+            let imgWindow = window.open("", "_blank");
+            imgWindow.document.write('<img src="' + src + '" style="width:100%">');
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <h1>แกลเลอรีสินค้า</h1>
+    <hr>
+    
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="images/products/product1.jpg" alt="สินค้า 1" onclick="enlargeImage('images/products/product1.jpg')">
+            <p>สินค้า 1</p>
+        </div>
+        <div class="gallery-item">
+            <img src="images/products/product2.jpg" alt="สินค้า 2" onclick="enlargeImage('images/products/product2.jpg')">
+            <p>สินค้า 2</p>
+        </div>
+        <div class="gallery-item">
+            <img src="images/products/product3.jpg" alt="สินค้า 3" onclick="enlargeImage('images/products/product3.jpg')">
+            <p>สินค้า 3</p>
+        </div>
+        <div class="gallery-item">
+            <img src="images/products/product4.jpg" alt="สินค้า 4" onclick="enlargeImage('images/products/product4.jpg')">
+            <p>สินค้า 4</p>
+        </div>
+    </div>
+    
+    <button class="back-to-top" onclick="scrollToTop()">กลับด้านบน</button>
+</body>
+</html>
+]
 ```
 - ภาพผลลัพธ์:
-[วางภาพ screenshot ที่นี่]
+[![image](https://github.com/user-attachments/assets/06511f8b-e109-4b09-98fe-3dca5044e041)
+]
 
 
 ## การทดลองที่ 5: การสร้างตารางและรายการ
@@ -391,12 +535,74 @@
 1. สร้างตารางแสดงข้อมูลส่วนตัว
 2. สร้างรายการเมนูอาหาร
 
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลส่วนตัวและเมนูอาหาร</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>ข้อมูลส่วนตัว</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>หัวข้อ</th>
+                <th>รายละเอียด</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ชื่อ</td>
+                <td>นายพรพรม สุขใจมิตร</td>
+            </tr>
+            <tr>
+                <td>อายุ</td>
+                <td>18 ปี</td>
+            </tr>
+            <tr>
+                <td>อาชีพ</td>
+                <td>นักพัฒนาเว็บ</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h1>เมนูอาหาร</h1>
+    <ul>
+        <li>ข้าวผัดกุ้ง</li>
+        <li>ผัดไทย</li>
+        <li>ต้มยำกุ้ง</li>
+        <li>ส้มตำไทย</li>
+    </ul>
+</body>
+</html>]
 ```html
 
 ```
 - ภาพผลลัพธ์:
-[วางภาพ screenshot ที่นี่]
+[![image](https://github.com/user-attachments/assets/ca0f9168-83f1-4117-8949-4d15f8f99024)
+]
 
 
 ## การทดลองที่ 6: การสร้างฟอร์ม
@@ -621,10 +827,125 @@
    - ตรวจสอบขนาดไฟล์รูปภาพ
 
 ### บันทึกผลการทดลอง
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        form {
+            width: 50%;
+            margin: 0 auto;
+            text-align: left;
+        }
+        label, input, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            width: auto;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let phone = document.getElementById("phone").value;
+            let file = document.getElementById("profilePic").files[0];
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let phonePattern = /^[0-9]{10}$/;
+            
+            if (!emailPattern.test(email)) {
+                alert("กรุณากรอกอีเมลให้ถูกต้อง");
+                return false;
+            }
+            if (password.length < 6) {
+                alert("รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร");
+                return false;
+            }
+            if (password !== confirmPassword) {
+                alert("รหัสผ่านไม่ตรงกัน");
+                return false;
+            }
+            if (!phonePattern.test(phone)) {
+                alert("เบอร์โทรต้องเป็นตัวเลข 10 หลัก");
+                return false;
+            }
+            if (file && file.size > 2 * 1024 * 1024) {
+                alert("ขนาดไฟล์รูปโปรไฟล์ต้องไม่เกิน 2MB");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>สมัครสมาชิก</h1>
+    <form onsubmit="return validateForm()">
+        <h2>ข้อมูลส่วนตัว</h2>
+        <label>ชื่อ-นามสกุล:</label>
+        <input type="text" required>
+        <label>วันเกิด:</label>
+        <input type="date" required>
+        <label>เพศ:</label>
+        <select required>
+            <option value="">เลือก</option>
+            <option value="ชาย">ชาย</option>
+            <option value="หญิง">หญิง</option>
+            <option value="อื่น ๆ">อื่น ๆ</option>
+        </select>
+        
+        <h2>ข้อมูลการติดต่อ</h2>
+        <label>อีเมล:</label>
+        <input type="email" id="email" required>
+        <label>เบอร์โทร:</label>
+        <input type="text" id="phone" required>
+        <label>ที่อยู่จัดส่ง:</label>
+        <textarea required></textarea>
+        
+        <h2>รูปโปรไฟล์</h2>
+        <input type="file" id="profilePic" accept="image/*">
+        
+        <h2>การตั้งค่ารหัสผ่าน</h2>
+        <label>รหัสผ่าน:</label>
+        <input type="password" id="password" required>
+        <label>ยืนยันรหัสผ่าน:</label>
+        <input type="password" id="confirmPassword" required>
+        
+        <h2>ความสนใจในหมวดหมู่สินค้า</h2>
+        <label><input type="checkbox" value="เทคโนโลยี"> เทคโนโลยี</label>
+        <label><input type="checkbox" value="เสื้อผ้า"> เสื้อผ้า</label>
+        <label><input type="checkbox" value="อาหาร"> อาหาร</label>
+        
+        <h2>การยอมรับเงื่อนไข</h2>
+        <label><input type="checkbox" required> ฉันยอมรับเงื่อนไขการใช้งาน</label>
+        
+        <button type="submit">สมัครสมาชิก</button>
+    </form>
+</body>
+</html>
+]
 ```
 - ภาพผลลัพธ์:
-[วางภาพ screenshot ที่นี่]
+[![image](https://github.com/user-attachments/assets/674f5e7e-a9de-4109-af57-1873c6ec1b6d)
+![image](https://github.com/user-attachments/assets/36d9cbbe-0eb1-49c5-8074-a1095333d8f0)
+]
 
 
 ## การทดลองที่ 7: HTML Layout
@@ -712,5 +1033,6 @@ semantic elements คือ elements ใน HTML5 ที่มีความห
 
 
 ### บันทึกผลการทดลอง
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+[![image](https://github.com/user-attachments/assets/76cfc785-5ee0-43eb-a778-29217e5eca13)
+]
 
